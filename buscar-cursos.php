@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
@@ -12,8 +13,6 @@ $crawler = new Crawler();
 $buscardor = new Buscador($client, $crawler);
 $cursos = $buscardor->buscar('/cursos-online-programacao/php');
 
-foreach ($cursos as $key => $curso) {
-    echo exibeMensagem($curso);
+foreach ($cursos as $curso) {
+    exibeMensagem($curso);
 }
-
-?>
